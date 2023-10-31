@@ -3,16 +3,16 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: nhse.stu1
-canonical: https://fhir.nhs.uk
+id: nhse.stu1 
+canonical: https://fhir.nhs.uk/England
 name: NHS England Implementation Guide STU1
-# title: Example Title
+title: NHS England Implementation Guide STU1 - Sprint 1 Review
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: sprint-1-review # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
@@ -76,7 +76,27 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
+  Guidance:
+    Sitemap overview: toc.html
+    NamingSystems: todo.html
+    Conformance: todo.html
+  Use Cases:
+    Summary: todo.html
+    Example Use Case: todo.html
+    Female Genital Mutilation (FGM): todo.html
+    Child Protection Information Sharing (CP-IS): todo.html
+    Organisation Data Service: todo.html
+  Profiles and Extensions:
+    Extensions Index: artifacts.html#structures-extension-definitions
+    All Extensions: artifacts.html#structures-extension-definitions
+    Profiles Index: artifacts.html
+  FHIR Assets:
+    FHIR Assets: artifacts.html
+  Examples:
+    Examples Index: todo.html
+  Contact Us: todo.html
+  Downloads: todo.html
+  Glossary: todo.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
