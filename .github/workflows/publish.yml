@@ -28,6 +28,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
+      - uses: lemonarc/jekyll-action@1.0.0
+
       - name: Build IG
         run: ./_genonce.sh
 
