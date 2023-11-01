@@ -28,12 +28,8 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '3.x'
-
-      - name: Install rubyrems
-        run: sudo apt update; sudo apt install rubygems -y
+      - name: Install RubyGems
+        run: sudo apt update; sudo apt install ruby ruby-all-dev rubygems -y
 
       - uses: lemonarc/jekyll-action@1.0.0
 
