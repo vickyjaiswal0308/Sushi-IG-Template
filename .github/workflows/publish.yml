@@ -31,7 +31,8 @@ jobs:
       - name: Install RubyGems
         run: sudo apt update; sudo apt install ruby ruby-all-dev rubygems -y
 
-      - uses: lemonarc/jekyll-action@1.0.0
+      - name: Install Jekyll
+        run: gem install jekyll
 
       - name: Build IG
         run: ./_genonce.sh
