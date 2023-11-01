@@ -22,6 +22,15 @@ jobs:
       - name: Install Publisher
         run: ./_updatePublisher.sh -y
 
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Build IG
+        run: ./_genonce.sh
+
       - name: Cache Node modules
         uses: actions/cache@v3
         with:
