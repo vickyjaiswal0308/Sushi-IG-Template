@@ -18,3 +18,12 @@ jobs:
   
       - name: Install SUSHI
         run: npm install -g fsh-sushi
+      
+      - name: Install Publisher
+        run: ./_updatePublisher.sh -y
+
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}--build-cache-npm-packages-${{ hashFiles('**/package-lock.json') }}
