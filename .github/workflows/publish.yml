@@ -28,6 +28,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
+      - uses: actions/setup-ruby
+        with:
+          ruby-version: '3.x'
+
       - uses: lemonarc/jekyll-action@1.0.0
 
       - name: Build IG
