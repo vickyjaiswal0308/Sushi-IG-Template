@@ -14,7 +14,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          none-version: 'current'
+          node-version: 'current'
   
       - name: Install SUSHI
         run: npm install -g fsh-sushi
@@ -31,6 +31,9 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '3.x'
+
+      - name: Install rubyrems
+        run: sudo apt update; sudo apt install rubygems -y
 
       - uses: lemonarc/jekyll-action@1.0.0
 
