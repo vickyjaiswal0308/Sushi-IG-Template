@@ -37,6 +37,15 @@ jobs:
       - name: Build IG
         run: ./_genonce.sh
 
+      - name: Zip IG
+        run: tar -czf ig.tar.gz output
+
+      - name: Publish IG Artefact
+        uses: actions/upload-artifact@v3
+          with:
+            name: IG Archive
+            path: ./ig.tar.gz
+
       - name: Cache Node modules
         uses: actions/cache@v3
         with:
