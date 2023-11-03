@@ -23,4 +23,4 @@ Description: "An extension used to allow the removal of a Flag and to indicate t
 * value[x] only Coding
 * value[x] from $England-FlagRemovalReason (required)
 * value[x].system 1..
-* value[x].code 1..
+* value[x].code 0..
