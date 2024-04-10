@@ -10,10 +10,10 @@ TODO
 
 ```gherkin
 Given a practitioner must access a patients reasonable adjustment records
-And consent has been provided
-When the practitioner retrieves the reasonable adjustment records
-Then all resources associated with reasonable adjustment records will be returned
- ---
+And consent is revoked
+When the practitioner updates the Consent resource to revoked
+Then all other resources associated with reasonable adjustment records will be removed
+```
 
 ### Workflow
 
