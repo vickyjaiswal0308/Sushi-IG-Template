@@ -78,7 +78,7 @@ dependencies:
 menu:
   Home: index.html
   Guidance:
-    Sitemap overview: toc.html
+    Sitemap overview: todo.html
     NamingSystems: todo.html
     Conformance: todo.html
   Use Cases:
