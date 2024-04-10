@@ -92,13 +92,12 @@ menu:
     Extensions Index: artifacts.html#structures-extension-definitions
     All Extensions: artifacts.html#structures-extension-definitions
     Profiles Index: artifacts.html
-  FHIR Assets:
-    FHIR Assets: artifacts.html
-  Examples:
-    Examples Index: todo.html
-  Contact Us: todo.html
-  Downloads: todo.html
-  Glossary: todo.html
+  Artifacts: artifacts.html
+  Examples: todo.html
+  About: 
+    Downloads: todo.html
+    Contact: todo.html
+    Glossary: todo.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
