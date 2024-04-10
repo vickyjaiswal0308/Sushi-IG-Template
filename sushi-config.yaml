@@ -5,8 +5,8 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: nhse.stu1 
 canonical: https://fhir.nhs.uk/England
-name: NHS England Implementation Guide STU1
-title: NHS England Implementation Guide STU1 - Sprint 1 Review
+name: NHS England Implementation Guide Template
+title: NHS England Implementation Guide Template
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 1.0.0
