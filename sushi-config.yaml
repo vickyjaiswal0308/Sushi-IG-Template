@@ -77,10 +77,6 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Guidance:
-    Sitemap overview: todo.html
-    NamingSystems: todo.html
-    Conformance: todo.html
   Data Model: todo.html
   Use Cases:
     Summary: todo.html
