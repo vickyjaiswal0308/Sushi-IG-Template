@@ -86,8 +86,11 @@ menu:
     Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
     Organisation Data Service: todo.html
   FHIR Assets:
-    Extensions: artifacts.html
     Profiles: artifacts.html
+    Extensions: artifacts.html
+    CodeSystems: artifacts.html
+    ValueSets: artifacts.html
+    All Assets: artifacts.html
   Artifacts: artifacts.html
   Examples: todo.html
   About: 
