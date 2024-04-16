@@ -85,10 +85,11 @@ menu:
     Child Protection Information Sharing (CP-IS): todo.html
     Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
     Organisation Data Service: todo.html
-  Profiles and Extensions:
-    Extensions Index: artifacts.html#structures-extension-definitions
-    All Extensions: artifacts.html#structures-extension-definitions
-    Profiles Index: artifacts.html
+ Fhir Assets:
+    Profiles: artifacts.html
+    Extensions: artifacts.html
+    CodeSystems: artifacts.html
+    All Assets: artifacts.html
   Artifacts: artifacts.html
   Examples: todo.html
   About: 
