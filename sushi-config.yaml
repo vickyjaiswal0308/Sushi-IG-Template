@@ -86,10 +86,10 @@ menu:
     Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
     Organisation Data Service: todo.html
  Fhir Assets:
-    Profiles: artifacts.html
-    Extensions: artifacts.html
-    CodeSystems: artifacts.html
-    All Assets: artifacts.html
+    Profiles: todo.html
+    Extensions: todo.html
+    CodeSystems: todo.html
+    All Assets: todo.html
   Artifacts: artifacts.html
   Examples: todo.html
   About: 
