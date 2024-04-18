@@ -1,18 +1,20 @@
-Instance: FGMPatientFlagExample1
-InstanceOf: PatientFlag
-Title: "FGM example of a patient Flag resource"
+Instance: FGMFlagExample1
+InstanceOf: Flag
+Title: "FGM example of a Flag resource"
 Usage: #example
-* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"
+* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag"
 
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
-* extension[=].valueAnnotation.text = "Example of flag notes extension text in patient flag"
+* extension[=].valueAnnotation.text = "Example of flag notes extension text in adjustment flag"
 
 * status = #active
-* code = PatientFlagCategory#FGM "Female Genital Mutilation Flag"
+* category[0] = PatientFlagCategory#FGM "Female Genital Mutilation Flag"
+* category[+] = FGM-FlagCategory#001 "Example FGM category"
+* code = $sct#902961000000107 "Family history of female genital mutilation (situation)"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "3fc83fd8-4a6d-48e4-91ab-12bb10a4a834"
+* contained.id = "9b5f2d1b-8175-407f-a49d-b4f04c9d4300"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"
