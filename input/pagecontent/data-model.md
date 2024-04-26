@@ -4,6 +4,8 @@ The Patient Flag is made up of Patient Flag and Provenances resources.  The  Fla
 
 ### Data Model
 
-<div>
-    <img style="max-width: 70%" alt="Patient Flag Data Model Diagram." src="data-model-PatientFlag.drawio.png"/>
+<div style="text-align: left;">
+
+  {%include data-model.svg%}
+
 </div>
