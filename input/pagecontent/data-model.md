@@ -20,7 +20,7 @@ erDiagram
     agent Agent
   }
 
-  Patient ||--o| PatientFlag : has
-
-  PatientFlag ||--|| Provenance : contains
+Patient ||--o| PatientFlag : has
+PatientFlag ||--|| Provenance : contains
+</div>
 
