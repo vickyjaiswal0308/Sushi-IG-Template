@@ -79,11 +79,9 @@ menu:
   Home: index.html
   Data Model: data-model.html
   Use Cases:
-    Summary: todo.html
-    Example Use Case: todo.html
+    Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
     Female Genital Mutilation (FGM): todo.html
     Child Protection Information Sharing (CP-IS): todo.html
-    Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
   FHIR Assets:
     Profiles: artifacts.html
     Extensions: artifacts.html
