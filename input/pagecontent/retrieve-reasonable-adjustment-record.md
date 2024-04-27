@@ -1,13 +1,10 @@
 ### Overview
 
-Patient consent must be obtained before retrieving any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
-
-For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
+Patient consent must be obtained before retrieving any adjustment or impairment.    
 
 ### Usecase
 
-After obtaining consent from a patient, a Reasonable Adjustment Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), or [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF).
-
+After obtaining consent from a patient, a Reasonable Adjustment Record may be retrieved if it exists.  
 <div style="text-align: left;">
 
   {%include retrieve-record-usecase.svg%}
