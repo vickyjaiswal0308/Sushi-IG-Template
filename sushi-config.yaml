@@ -82,12 +82,6 @@ menu:
     Reasonable Adjustment Record (RA-Record): retrieve-reasonable-adjustment-record.html
     Female Genital Mutilation (FGM): todo.html
     Child Protection Information Sharing (CP-IS): todo.html
-  FHIR Assets:
-    Profiles: artifacts.html
-    Extensions: artifacts.html
-    CodeSystems: artifacts.html
-    ValueSets: artifacts.html
-    All Assets: artifacts.html
   Artifacts: artifacts.html
   Examples: examples.html
   About: 
