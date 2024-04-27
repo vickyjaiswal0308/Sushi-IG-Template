@@ -4,23 +4,8 @@ The Patient Flag is made up of Patient Flag and Provenances resources.  The  Fla
 
 ### Data Model
 
-<div class="mermaid">
-erDiagram
-  Patient {
-    NHS-number identifier
-  }
-  PatientFlag {
-    patient Patient
-    code CodeableConcept
-    category CodeableConcept
-    contained Provenance
-  }
-  Provenance {
-    recorded DateTime
-    agent Agent
-  }
+<div style="text-align: left;">
 
-Patient ||--o| PatientFlag : has
-PatientFlag ||--|| Provenance : contains
+  {%include data-model.svg%}
+
 </div>
-
