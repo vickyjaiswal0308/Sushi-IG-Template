@@ -1,14 +1,32 @@
 ### Overview
 
-Patient consent must be obtained before retrieving any adjustment or impairment.  
+Patient consent must be obtained before retrieving any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
+
+For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
 
 ### Usecase
 
-TODO
+After obtaining consent from a patient, a Reasonable Adjustment Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), or [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF).
+
+<div style="text-align: left;">
+
+  {%include retrieve-record-usecase.svg%}
+
+</div>
 
 #### Scenarios
 
 ```gherkin
+Given a practitioner must access a patients reasonable adjustment records
+And consent has been provided
+When the practitioner retrieves the reasonable adjustment records
+Then all resources associated with reasonable adjustment records will be returned
+
+Given a practitioner must access a patients reasonable adjustment records
+And no consent has been provided
+When the practitioner attempts to retrieve the reasonable adjustment records
+Then no resources will be returned
+
 Given a practitioner must access a patients reasonable adjustment records
 And consent is revoked
 When the practitioner updates the Consent resource to revoked
@@ -17,16 +35,73 @@ Then all other resources associated with reasonable adjustment records will be r
 
 ### Workflow
 
-TODO
+A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
+
+<div>
+    <img style="max-width: 70%" alt="Retrieve record workflow BPMN diagram." src="retrieve-record-workflow.svg"/>
+</div>
 
 ### System Interaction
 
-TODO
+<div style="text-align: left;">
+
+  {%include retrieve-record-sequence.svg%}
+
+</div>
 
 ### Queries
 
-TODO
+Using [FHIR search](https://www.hl7.org/fhir/search.html) capabilities, it is possible to retrieve the reasonable adjustment records in several ways.
+
+#### Patient endpoint search 
+
+This section describes how to query from the [Patient](http://www.hl7.org/fhir/R4/patient.html#search) endpoint using [FHIR search](https://www.hl7.org/fhir/search.html)
+
+This will return all associated flag resources for Reasonable Adjustments.
+
+```
+GET /Patient?identifier=9912003888&_has:Flag:patient:code=NRAF&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient 
+```
+
+This limits the search to patients thant have the identifier `9912003888`
+
+```
+identifier=9912003888
+```
+
+This limits the search to patients that have Flag resources linked via patient and have the code NRAF, and also includes the resource in the returned searchset Bundle.
+
+```
+&_has:Flag:patient:code=NRAF&_revinclude=Flag:patient
+```
+
+This limits the search to patients that have Flag resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
+
+```
+&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient
+```
+
+This limits the search to patients that have Consent resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
+
+```
+&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient
+```
+
+This limits the search to patients that have Condition resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
+
+```
+&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient
+```
+
+The following queries will return all or some of the resources constituing a Reasonable Adjustments record, i.e.
+
+* [Flag Consent](StructureDefinition-FlagConsent.html) resource
+* [Patient Flag](StructureDefinition-PatientFlag.html) resources  
+* [Programme Flag](StructureDefinition-ProgrammeFlag.html) resources
+* [Flag Condition](StructureDefinition-FlagCondition.html) resources 
+
 
 ### Relevant Documentation
 
-TODO
+* FHIR [Search](http://www.hl7.org/fhir/R4/search.html)
+* [SearchParameters](https://www.hl7.org/fhir/R4/searchparameter.html)
